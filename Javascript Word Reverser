@@ -1,0 +1,20 @@
+var choice =prompt ("What word do you want us to reverse?").toLowerCase();
+console.log("Okay your word is " + choice);
+var first = "";
+var last = "";
+
+for (var counter = 1; counter <= choice.length/2; counter++) 
+{
+     first = first +choice.substring(choice.length-counter, choice.length+1-counter); 
+     last = choice.substring(counter-1, counter) +last;  
+}
+
+if (choice.length%2===0)
+{
+    console.log("Your word reversed is... " + first + last);
+}
+    else
+    {
+        var mid= choice.substring(choice.length/2, choice.length/2+1);
+        console.log("Your word reversed is..." + first + mid + last); 
+    }
